@@ -19,5 +19,26 @@ namespace obrazek
                 }
             }
         }
+
+        private void Rotate_Click(object sender, EventArgs e)
+        {
+            if(originalImage != null)
+            {
+                if (radioButton90.Checked)
+                {
+                    originalImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                }
+                else if (radioButton180.Checked)
+                {
+                    originalImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                }
+                else if (radioButton270.Checked)
+                {
+                    originalImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                }
+            }
+            pictureBox1.Image = originalImage;
+            pictureBox1.Refresh();
+        }
     }
 }

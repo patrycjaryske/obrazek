@@ -30,6 +30,10 @@
         {
             Load = new Button();
             pictureBox1 = new PictureBox();
+            Rotate = new Button();
+            radioButton90 = new RadioButton();
+            radioButton180 = new RadioButton();
+            radioButton270 = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -51,22 +55,74 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // Rotate
+            // 
+            Rotate.Location = new Point(123, 149);
+            Rotate.Name = "Rotate";
+            Rotate.Size = new Size(75, 23);
+            Rotate.TabIndex = 2;
+            Rotate.Text = "Rotate";
+            Rotate.UseVisualStyleBackColor = true;
+            Rotate.Click += Rotate_Click;
+            // 
+            // radioButton90
+            // 
+            radioButton90.AutoSize = true;
+            radioButton90.Location = new Point(126, 56);
+            radioButton90.Name = "radioButton90";
+            radioButton90.Size = new Size(37, 19);
+            radioButton90.TabIndex = 3;
+            radioButton90.TabStop = true;
+            radioButton90.Text = "90";
+            radioButton90.UseVisualStyleBackColor = true;
+            // 
+            // radioButton180
+            // 
+            radioButton180.AutoSize = true;
+            radioButton180.Location = new Point(126, 81);
+            radioButton180.Name = "radioButton180";
+            radioButton180.Size = new Size(43, 19);
+            radioButton180.TabIndex = 4;
+            radioButton180.TabStop = true;
+            radioButton180.Text = "180";
+            radioButton180.UseVisualStyleBackColor = true;
+            // 
+            // radioButton270
+            // 
+            radioButton270.AutoSize = true;
+            radioButton270.Location = new Point(126, 106);
+            radioButton270.Name = "radioButton270";
+            radioButton270.Size = new Size(43, 19);
+            radioButton270.TabIndex = 5;
+            radioButton270.TabStop = true;
+            radioButton270.Text = "270";
+            radioButton270.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(radioButton270);
+            Controls.Add(radioButton180);
+            Controls.Add(radioButton90);
+            Controls.Add(Rotate);
             Controls.Add(pictureBox1);
             Controls.Add(Load);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button Load;
         private PictureBox pictureBox1;
+        private Button Rotate;
+        private RadioButton radioButton90;
+        private RadioButton radioButton180;
+        private RadioButton radioButton270;
     }
 }
