@@ -22,7 +22,7 @@ namespace obrazek
 
         private void Rotate_Click(object sender, EventArgs e)
         {
-            if(originalImage != null)
+            if (originalImage != null)
             {
                 if (radioButton90.Checked)
                 {
@@ -39,6 +39,34 @@ namespace obrazek
             }
             pictureBox1.Image = originalImage;
             pictureBox1.Refresh();
+        }
+
+        private void InvertColors_Click(object sender, EventArgs e)
+        {
+            if (originalImage == null) return;
+            Bitmap invertedImage = new Bitmap(originalImage);
+            for (int y = 0;  y < invertedImage.Height;y++ )
+            {
+                for (int x = 0; x < invertedImage.Width;x++ )
+                {
+                    Color pixel = invertedImage.GetPixel(x, y);
+                    Color invertedPixel = Color.FromArgb(255 - pixel.R, 255 - pixel.G, 255 -pixel.B);
+                    invertedImage.SetPixel(x, y, invertedPixel);
+                }
+            }
+            pictureBox1.Image = invertedImage;
+        }
+
+        private void Upsidedown_Click(object sender, EventArgs e)
+        {
+            if (originalImage != null)
+            {
+                originalImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                pictureBox1.Image = originalImage;
+                pictureBox1.Refresh();
+            }
+            
+
         }
     }
 }

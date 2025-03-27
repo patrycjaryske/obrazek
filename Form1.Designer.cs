@@ -34,6 +34,8 @@
             radioButton90 = new RadioButton();
             radioButton180 = new RadioButton();
             radioButton270 = new RadioButton();
+            InvertColors = new Button();
+            Upsidedown = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -98,11 +100,33 @@
             radioButton270.Text = "270";
             radioButton270.UseVisualStyleBackColor = true;
             // 
+            // InvertColors
+            // 
+            InvertColors.Location = new Point(123, 178);
+            InvertColors.Name = "InvertColors";
+            InvertColors.Size = new Size(75, 38);
+            InvertColors.TabIndex = 6;
+            InvertColors.Text = "Invert Colors";
+            InvertColors.UseVisualStyleBackColor = true;
+            InvertColors.Click += InvertColors_Click;
+            // 
+            // Upsidedown
+            // 
+            Upsidedown.Location = new Point(123, 222);
+            Upsidedown.Name = "Upsidedown";
+            Upsidedown.Size = new Size(75, 41);
+            Upsidedown.TabIndex = 7;
+            Upsidedown.Text = "Upside Down";
+            Upsidedown.UseVisualStyleBackColor = true;
+            Upsidedown.Click += Upsidedown_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Upsidedown);
+            Controls.Add(InvertColors);
             Controls.Add(radioButton270);
             Controls.Add(radioButton180);
             Controls.Add(radioButton90);
@@ -124,5 +148,7 @@
         private RadioButton radioButton90;
         private RadioButton radioButton180;
         private RadioButton radioButton270;
+        private Button InvertColors;
+        private Button Upsidedown;
     }
 }
