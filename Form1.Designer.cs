@@ -30,6 +30,7 @@
         {
             Load = new Button();
             pictureBox1 = new PictureBox();
+            OnlyGreen = new Button();
             Rotate = new Button();
             radioButton90 = new RadioButton();
             radioButton180 = new RadioButton();
@@ -120,6 +121,16 @@
             Upsidedown.UseVisualStyleBackColor = true;
             Upsidedown.Click += Upsidedown_Click;
             // 
+            // OnlyGreen
+            // 
+            OnlyGreen.Location = new Point(123, 344);
+            OnlyGreen.Name = "OnlyGreen";
+            OnlyGreen.Size = new Size(75, 23);
+            OnlyGreen.TabIndex = 2;
+            OnlyGreen.Text = "Only Green";
+            OnlyGreen.UseVisualStyleBackColor = true;
+            OnlyGreen.Click += OnlyGreen_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -131,6 +142,7 @@
             Controls.Add(radioButton180);
             Controls.Add(radioButton90);
             Controls.Add(Rotate);
+            Controls.Add(OnlyGreen);
             Controls.Add(pictureBox1);
             Controls.Add(Load);
             Name = "Form1";
@@ -150,5 +162,6 @@
         private RadioButton radioButton270;
         private Button InvertColors;
         private Button Upsidedown;
+        private Button OnlyGreen;
     }
 }

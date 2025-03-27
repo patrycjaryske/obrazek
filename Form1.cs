@@ -20,6 +20,25 @@ namespace obrazek
             }
         }
 
+        private void OnlyGreen_Click(object sender, EventArgs e)
+        {
+            if (originalImage == null) return;
+
+            Bitmap greenImage = new Bitmap(originalImage);
+            for (int y = 0; y < greenImage.Height; y++)
+            {
+                for (int x = 0; x < greenImage.Width; x++)
+                {
+                    Color pixel = greenImage.GetPixel(x, y);
+                    if(pixel.G < pixel.R || pixel.G < pixel.B)
+                    {
+                        greenImage.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+            pictureBox1.Image = greenImage;
+        }
+
         private void Rotate_Click(object sender, EventArgs e)
         {
             if (originalImage != null)
@@ -71,4 +90,6 @@ namespace obrazek
 
 
     }
+
+
 }
